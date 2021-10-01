@@ -6,6 +6,7 @@ CREATE TABLE users
  Register_dugaar nvarchar(20),
  Nas int,
  Huis nvarchar(10),
+ phone int,
  email nvarchar(30),
  Geriin_hayag nvarchar(50),
  user_type_id int)
@@ -68,3 +69,15 @@ create table student_tuluvluguu
     create table department
    (department_id int primary key not null identity(1,1),
     department_name nvarchar(30))
+    
+    create table lesson
+    (lesson_id int primary key not null identity(1,1),
+     lesson_name nvarchar(50),
+     lesson_code nvarchar(20),
+     lesson_credit int)
+   
+   create table calc_lesson
+   (calc_lesson_id int primary key not null identity(1,1),
+    lesson_id int,
+    student_id int,
+    dun float)
